@@ -1,0 +1,83 @@
+{
+  "package": "obix-binding-java-kotlin",
+  "dir": "binding/obix-binding-java-kotlin",
+  "importedBy": "scripts/recovery/import-packages.mjs",
+  "snapshot": "snap-20260924T142414Z",
+  "stage": "stage-2 lift-and-shift (base owner; later stages repair/merge)",
+  "sources": [
+    {
+      "label": "upstream:obix-binding-java-kotlin@9929780",
+      "repo": "obix-binding-java-kotlin",
+      "url": "https://github.com/obinexusmk2/obix-binding-java-kotlin",
+      "sha": "9929780e6017ecff4854207569c854057b62b4cb",
+      "path": ".",
+      "license": "MIT",
+      "licenseFileUpstream": true,
+      "filesImported": 11,
+      "filesExcluded": 8
+    }
+  ],
+  "originalManifest": {
+    "name": "@obinexusltd/obix-binding-java-kotlin",
+    "version": "0.1.2",
+    "license": "MIT",
+    "bin": null,
+    "scripts": {
+      "build": "tsc",
+      "test": "vitest run"
+    }
+  },
+  "transforms": [
+    "package.json regenerated (lockstep version, exact internal pins, exports with \"types\" first, standard scripts)",
+    "tsconfig.json generated (NodeNext via tsconfig.base.json)",
+    "internal specifiers renamed: none",
+    "relative imports given \".js\"/\"/index.js\" extensions: 0"
+  ],
+  "localFixes": [
+    {
+      "stage": "stage-7",
+      "files": [
+        "package.json"
+      ],
+      "why": "Stage 7 (tarball inspection): __tests__ removed from the files allow-list (tests must not ship)"
+    }
+  ],
+  "scopeScrub": {
+    "rule": "scripts/recovery/scrub-rules.mjs (brief: no other OBINexus projects)",
+    "replacementsPerFile": {
+      "README.md": 3,
+      "docs/01-overview.md": 1,
+      "docs/02-installation-and-setup.md": 1,
+      "docs/03-binding-lifecycle.md": 2,
+      "src/index.ts": 7
+    }
+  },
+  "authoredOverlay": [],
+  "excluded": [
+    "dist/**",
+    "node_modules/**",
+    "lockfiles",
+    "tsconfig*.json (regenerated)",
+    ".gitignore",
+    ".github/**",
+    "coverage/**"
+  ],
+  "unresolvedRelativeImports": [],
+  "note": null,
+  "renamedFrom": [
+    {
+      "name": "@obinexusltd/obix-binding-java-kotlin",
+      "dir": "binding/obix-binding-java-kotlin",
+      "stage": "unscoped-naming",
+      "why": "D-102 (2026-09-29): OBIX packages are named without an npm scope — previous name @obinexusltd/obix-binding-java-kotlin, current name obix-binding-java-kotlin (docs/recovery/unscoped-migration.md); the directory, version and exports are unchanged"
+    }
+  ],
+  "export": {
+    "from": "https://github.com/obinexusmk2/obix-monorepo",
+    "branch": "recovery/obix-api-preserving-rebuild",
+    "commit": "69cafc94910c1add865a520877617ac307668875",
+    "directory": "binding/obix-binding-java-kotlin",
+    "exportedBy": "scripts/release/export-repos.mjs",
+    "note": "a clean initial commit of this package; the monorepo history is not imported (D-103). Local machine paths in this record are replaced by <local workspace>."
+  }
+}

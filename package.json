@@ -1,0 +1,53 @@
+{
+  "name": "obix-binding-java-kotlin",
+  "version": "0.5.0",
+  "description": "OBIX Java/Kotlin Binding - Android native, enterprise backend",
+  "license": "MIT",
+  "author": "OBINexus <okpalan@protonmail.com>",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "src",
+    "docs",
+    "README.md",
+    "LICENSE",
+    "__tests__",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run"
+  },
+  "optionalDependencies": {
+    "ffi-napi": "^4.0.3",
+    "ref-napi": "^3.0.3"
+  },
+  "keywords": [
+    "obix"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/obinexus/obix-binding-java-kotlin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/obinexus/obix-binding-java-kotlin/issues"
+  },
+  "homepage": "https://github.com/obinexus/obix-binding-java-kotlin#readme"
+}
